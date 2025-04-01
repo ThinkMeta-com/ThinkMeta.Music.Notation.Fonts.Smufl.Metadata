@@ -38,7 +38,7 @@ public class GlyphNamesTests
     private static async Task<Dictionary<string, GlyphNameInfo>?> GetDictionaryAsync()
     {
         using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests.Resources.glyphnames.json");
-        var dictionary = await GlyphNames.ReadFromStreamAsync(stream!);
+        var dictionary = await GlyphNames.DeserializeFromStreamAsync(stream!);
         return dictionary;
     }
 }

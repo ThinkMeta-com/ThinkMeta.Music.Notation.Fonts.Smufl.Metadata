@@ -12,10 +12,10 @@ public static class GlyphNames
     /// </summary>
     /// <param name="path">The file path.</param>
     /// <returns>A dictionary with all glyph names and their information.</returns>
-    public static async Task<Dictionary<string, GlyphNameInfo>?> ReadFromFileAsync(string path)
+    public static async Task<Dictionary<string, GlyphNameInfo>?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await ReadFromStreamAsync(stream);
+        return await DeserializeFromStreamAsync(stream);
     }
 
     /// <summary>
@@ -23,5 +23,5 @@ public static class GlyphNames
     /// </summary>
     /// <param name="stream">The stream.</param>
     /// <returns>A dictionary with all glyph names and their information.</returns>
-    public static ValueTask<Dictionary<string, GlyphNameInfo>?> ReadFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<Dictionary<string, GlyphNameInfo>>(stream);
+    public static ValueTask<Dictionary<string, GlyphNameInfo>?> DeserializeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<Dictionary<string, GlyphNameInfo>>(stream);
 }

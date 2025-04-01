@@ -15,7 +15,7 @@ public static class Classes
     public static async Task<Dictionary<string, string[]>?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await ReadFromStreamAsync(stream);
+        return await DeserializeFromStreamAsync(stream);
     }
 
     /// <summary>
@@ -23,5 +23,5 @@ public static class Classes
     /// </summary>
     /// <param name="stream">The stream.</param>
     /// <returns>A dictionary with all classes and their glyphs.</returns>
-    public static ValueTask<Dictionary<string, string[]>?> ReadFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<Dictionary<string, string[]>>(stream);
+    public static ValueTask<Dictionary<string, string[]>?> DeserializeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<Dictionary<string, string[]>>(stream);
 }

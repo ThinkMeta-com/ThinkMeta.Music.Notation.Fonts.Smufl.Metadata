@@ -11,7 +11,7 @@ public class ClassesTests
     {
         try {
             using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests.Resources.classes.json");
-            var dictionary = await Classes.ReadFromStreamAsync(stream!);
+            var dictionary = await Classes.DeserializeFromStreamAsync(stream!);
             Assert.IsNotNull(dictionary);
         }
         catch {

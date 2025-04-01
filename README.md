@@ -1,0 +1,1 @@
+# ThinkMeta.Music.Notation.Fonts.Smufl.Metadata

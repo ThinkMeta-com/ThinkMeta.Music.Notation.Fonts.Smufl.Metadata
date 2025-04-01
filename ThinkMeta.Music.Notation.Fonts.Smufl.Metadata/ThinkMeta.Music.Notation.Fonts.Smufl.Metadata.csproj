@@ -1,5 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>$(TargetFramework)</TargetFramework>
+
+        <Title>SMuFL font metadata processor</Title>
+        <Description>SMuFL font metadata processor</Description>
+        <Copyright>Copyright (c) 2025 ThinkMeta Software GmbH</Copyright>
+        <PackageProjectUrl>https://github.com/ThinkMeta-com/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ThinkMeta-com/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.git</RepositoryUrl>
+        <PackageTags>music;smufl;fonts</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Version>1.0.0</Version>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
 </Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>$(TargetFramework)</TargetFramework>
+        <TM_IsTestProject>true</TM_IsTestProject>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <NoWarn>%(NoWarn);IDE0005</NoWarn>
+        <GenerateTargetFrameworkAttribute>true</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Resources\*" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\*" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ThinkMeta.Music.Notation.Fonts.Smufl.Metadata\ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.csproj" />
+    </ItemGroup>
+</Project>

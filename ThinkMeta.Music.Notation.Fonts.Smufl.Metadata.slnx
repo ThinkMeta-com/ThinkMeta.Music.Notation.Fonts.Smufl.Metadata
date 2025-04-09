@@ -4,6 +4,7 @@
     <File Path="Directory.Packages.Props" />
     <File Path="LICENSE" />
     <File Path="README.md" />
+    <File Path="SIL-LICENSE.txt" />
   </Folder>
   <Folder Name="/ThinkMeta.SolutionFiles/">
     <File Path="ThinkMeta.SolutionFiles/.clang-format" />

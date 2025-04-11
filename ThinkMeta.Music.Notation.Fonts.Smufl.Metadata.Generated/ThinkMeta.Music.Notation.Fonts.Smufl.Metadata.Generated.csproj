@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
-
-        <Title>SMuFL font metadata processor</Title>
-        <Description>SMuFL font metadata processor</Description>
+        <TargetFrameworks>netstandard20;net7.0;net8.0;net9.0</TargetFrameworks>
+        <LangVersion>latest</LangVersion>
+        
+        <Title>Generated SMuFL font metadata</Title>
+        <Description>Generated SMuFL font metadata</Description>
         <Copyright>Copyright (c) 2025 ThinkMeta Software GmbH</Copyright>
         <PackageProjectUrl>https://github.com/ThinkMeta-com/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata</PackageProjectUrl>
         <RepositoryUrl>https://github.com/ThinkMeta-com/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.git</RepositoryUrl>

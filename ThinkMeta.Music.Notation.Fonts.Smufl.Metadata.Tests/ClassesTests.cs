@@ -10,7 +10,7 @@ public class ClassesTests
     public async Task ValidateW3cJsonFileAsync()
     {
         try {
-            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests.Resources.classes.json");
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{GetType().Namespace}.Resources.classes.json");
             var dictionary = await Classes.DeserializeFromStreamAsync(stream!);
             Assert.IsNotNull(dictionary);
         }

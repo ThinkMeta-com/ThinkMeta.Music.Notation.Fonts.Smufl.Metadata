@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "$(SolutionDir)ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generated"
+    }
+  }
+}

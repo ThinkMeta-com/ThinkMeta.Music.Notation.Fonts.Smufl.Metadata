@@ -37,7 +37,7 @@ public class RangesTests
 
     private static async Task<Dictionary<string, RangeInfo>?> GetDictionaryAsync()
     {
-        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests.Resources.ranges.json");
+        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(RangesTests).Namespace}.Resources.ranges.json");
         var dictionary = await Ranges.DeserializeFromStreamAsync(stream!);
         return dictionary;
     }

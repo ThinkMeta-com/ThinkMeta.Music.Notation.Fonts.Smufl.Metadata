@@ -20,7 +20,7 @@ public class FontMetadataTests
 
     private static async Task<FontMetadata?> GetMetadataAsync()
     {
-        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests.Resources.bravura_metadata.json");
+        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(FontMetadataTests).Namespace}.Resources.bravura_metadata.json");
         var fontMetadata = await FontMetadata.DeserialzeFromStreamAsync(stream!);
         return fontMetadata;
     }

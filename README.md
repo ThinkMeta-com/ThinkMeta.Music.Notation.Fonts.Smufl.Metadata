@@ -2,6 +2,9 @@
 
 Provides classes for reading SMuFL font metadata.
 
+[![NuGet Package](https://img.shields.io/nuget/v/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata)](https://www.nuget.org/packages/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata) ThinkMeta.Music.Notation.Fonts.Smufl.Metadata<br>
+[![NuGet Package](https://img.shields.io/nuget/v/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generated)](https://www.nuget.org/packages/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generated) ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generated
+
 # Usage
 
 ## Reading classes.json, glyphnames.json and ranges.json

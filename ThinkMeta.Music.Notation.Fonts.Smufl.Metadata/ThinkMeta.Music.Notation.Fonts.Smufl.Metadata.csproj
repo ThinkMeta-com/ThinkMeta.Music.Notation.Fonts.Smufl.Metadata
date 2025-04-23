@@ -13,6 +13,12 @@
         <Version>$(SolutionPackageVersion)</Version>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <PackageReleaseNotes>
+            - Added synchronous versions of the methods.
+        </PackageReleaseNotes>    
+    </PropertyGroup>
+    
     <ItemGroup>
         <None Include="..\LICENSE">
             <Pack>True</Pack>

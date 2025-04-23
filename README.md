@@ -8,9 +8,16 @@ Provides classes for reading SMuFL font metadata.
 
 ```cs
 // JSON files can be downloaded from GitHub
+
+// async methods
 var classes = await Classes.DeserializeFromFileAsync("classes.json");
 var glyphNames = await GlyphNames.DeserializeFromFileAsync("glyphnames.json");
 var ranges = await Ranges.DeserializeFromFileAsync("ranges.json");
+
+// sync methods
+var classes = Classes.DeserializeFromFile("classes.json");
+var glyphNames = GlyphNames.DeserializeFromFile("glyphnames.json");
+var ranges = Ranges.DeserializeFromFile("ranges.json");
 ```
 
 ## Reading font metadata

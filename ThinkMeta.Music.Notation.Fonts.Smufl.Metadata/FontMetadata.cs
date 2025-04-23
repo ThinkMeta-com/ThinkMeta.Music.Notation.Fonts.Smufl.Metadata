@@ -8,6 +8,26 @@ namespace ThinkMeta.Music.Notation.Fonts.Smufl.Metadata;
 /// </summary>
 public class FontMetadata
 {
+    private static readonly JsonSerializerOptions _jsonSerializerOptions = new() { Converters = { new GlyphPointConverter() } };
+
+    /// <summary>
+    /// Deserializes metadata from a JSON file.
+    /// </summary>
+    /// <param name="path">The file path.</param>
+    /// <returns>The metadata object.</returns>
+    public static FontMetadata? DeserializeFromFile(string path)
+    {
+        using var stream = File.OpenRead(path);
+        return DeserialzeFromStream(stream);
+    }
+
+    /// <summary>
+    /// Deserializes metadata from a stream.
+    /// </summary>
+    /// <param name="stream">The stream.</param>
+    /// <returns>The metadata object.</returns>
+    public static FontMetadata? DeserialzeFromStream(Stream stream) => JsonSerializer.Deserialize<FontMetadata>(stream, _jsonSerializerOptions);
+
     /// <summary>
     /// Deserializes metadata from a JSON file.
     /// </summary>
@@ -24,7 +44,7 @@ public class FontMetadata
     /// </summary>
     /// <param name="stream">The stream.</param>
     /// <returns>The metadata object.</returns>
-    public static ValueTask<FontMetadata?> DeserialzeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<FontMetadata>(stream, new JsonSerializerOptions { Converters = { new GlyphPointConverter() } });
+    public static ValueTask<FontMetadata?> DeserialzeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<FontMetadata>(stream, _jsonSerializerOptions);
 
     /// <summary>
     /// The name of the font to which the metadata applies.

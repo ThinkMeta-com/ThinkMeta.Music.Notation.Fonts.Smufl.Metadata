@@ -7,10 +7,11 @@ namespace ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests;
 public class FontMetadataTests
 {
     [TestMethod]
-    public async Task ValidateBravuraFontMetadataAsync()
+    public void ValidateBravuraFontMetadata()
     {
         try {
-            var fontMetadata = await GetMetadataAsync();
+            using var stream = GetResourceStream();
+            var fontMetadata = FontMetadata.DeserialzeFromStream(stream!);
             Assert.IsNotNull(fontMetadata);
         }
         catch {
@@ -18,10 +19,18 @@ public class FontMetadataTests
         }
     }
 
-    private static async Task<FontMetadata?> GetMetadataAsync()
+    [TestMethod]
+    public async Task ValidateBravuraFontMetadataAsync()
     {
-        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(FontMetadataTests).Namespace}.Resources.bravura_metadata.json");
-        var fontMetadata = await FontMetadata.DeserialzeFromStreamAsync(stream!);
-        return fontMetadata;
+        try {
+            using var stream = GetResourceStream();
+            var fontMetadata = await FontMetadata.DeserialzeFromStreamAsync(stream!);
+            Assert.IsNotNull(fontMetadata);
+        }
+        catch {
+            Assert.Fail();
+        }
     }
+
+    private static Stream? GetResourceStream() => Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(FontMetadataTests).Namespace}.Resources.bravura_metadata.json");
 }

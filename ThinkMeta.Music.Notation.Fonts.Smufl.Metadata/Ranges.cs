@@ -12,6 +12,24 @@ public static class Ranges
     /// </summary>
     /// <param name="path">The file path.</param>
     /// <returns>A dictionary with all ranges.</returns>
+    public static Dictionary<string, RangeInfo>? DeserializeFromFile(string path)
+    {
+        using var stream = File.OpenRead(path);
+        return DeserializeFromStream(stream);
+    }
+
+    /// <summary>
+    /// Deserializes "ranges.json" from a stream.
+    /// </summary>
+    /// <param name="stream">The stream.</param>
+    /// <returns>A dictionary with all ranges.</returns>
+    public static Dictionary<string, RangeInfo>? DeserializeFromStream(Stream stream) => JsonSerializer.Deserialize<Dictionary<string, RangeInfo>>(stream);
+
+    /// <summary>
+    /// Deserializes "ranges.json" from a file.
+    /// </summary>
+    /// <param name="path">The file path.</param>
+    /// <returns>A dictionary with all ranges.</returns>
     public static async Task<Dictionary<string, RangeInfo>?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);

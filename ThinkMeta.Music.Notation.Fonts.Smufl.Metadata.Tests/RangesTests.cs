@@ -7,6 +7,42 @@ namespace ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Tests;
 public class RangesTests
 {
     [TestMethod]
+    public void ValidateW3cJsonFile()
+    {
+        try {
+            var dictionary = GetDictionary();
+            Assert.IsNotNull(dictionary);
+        }
+        catch {
+            Assert.Fail();
+        }
+    }
+
+    [TestMethod]
+    public void ValidateW3cJsonFileCodePoints()
+    {
+        try {
+            var dictionary = GetDictionary();
+            Assert.IsNotNull(dictionary);
+
+            foreach (var glyphName in dictionary!) {
+                _ = glyphName.Value.RangeStartValue;
+                _ = glyphName.Value.RangeEndValue;
+            }
+        }
+        catch {
+            Assert.Fail();
+        }
+    }
+
+    private static Dictionary<string, RangeInfo>? GetDictionary()
+    {
+        using var stream = GetResourceStream();
+        var dictionary = Ranges.DeserializeFromStream(stream!);
+        return dictionary;
+    }
+
+    [TestMethod]
     public async Task ValidateW3cJsonFileAsync()
     {
         try {
@@ -37,8 +73,10 @@ public class RangesTests
 
     private static async Task<Dictionary<string, RangeInfo>?> GetDictionaryAsync()
     {
-        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(RangesTests).Namespace}.Resources.ranges.json");
+        using var stream = GetResourceStream();
         var dictionary = await Ranges.DeserializeFromStreamAsync(stream!);
         return dictionary;
     }
+
+    private static Stream? GetResourceStream() => Assembly.GetExecutingAssembly().GetManifestResourceStream($"{typeof(RangesTests).Namespace}.Resources.ranges.json");
 }

@@ -36,7 +36,7 @@ public class FontMetadata
     public static async Task<FontMetadata?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await DeserialzeFromStreamAsync(stream);
+        return await DeserialzeFromStreamAsync(stream).ConfigureAwait(false);
     }
 
     /// <summary>

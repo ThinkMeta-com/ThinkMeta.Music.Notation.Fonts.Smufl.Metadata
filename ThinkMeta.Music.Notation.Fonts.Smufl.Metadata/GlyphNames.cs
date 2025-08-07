@@ -33,7 +33,7 @@ public static class GlyphNames
     public static async Task<Dictionary<string, GlyphNameInfo>?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await DeserializeFromStreamAsync(stream);
+        return await DeserializeFromStreamAsync(stream).ConfigureAwait(false);
     }
 
     /// <summary>

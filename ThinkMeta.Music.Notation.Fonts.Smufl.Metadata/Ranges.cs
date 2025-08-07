@@ -33,7 +33,7 @@ public static class Ranges
     public static async Task<Dictionary<string, RangeInfo>?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await DeserializeFromStreamAsync(stream);
+        return await DeserializeFromStreamAsync(stream).ConfigureAwait(false);
     }
 
     /// <summary>

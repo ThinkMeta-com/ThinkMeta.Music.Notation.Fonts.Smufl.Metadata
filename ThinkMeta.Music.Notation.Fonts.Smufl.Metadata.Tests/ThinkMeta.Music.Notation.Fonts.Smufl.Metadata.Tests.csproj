@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>$(TargetFramework)</TargetFramework>
         <TM_IsTestProject>true</TM_IsTestProject>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
         <NoWarn>%(NoWarn);IDE0005</NoWarn>

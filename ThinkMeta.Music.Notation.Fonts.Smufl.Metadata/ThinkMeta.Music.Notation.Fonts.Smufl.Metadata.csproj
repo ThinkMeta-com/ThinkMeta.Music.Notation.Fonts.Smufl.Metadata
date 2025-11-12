@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
 
         <Title>SMuFL font metadata processor</Title>
         <Description>SMuFL font metadata processor</Description>
@@ -15,7 +15,7 @@
 
     <PropertyGroup>
         <PackageReleaseNotes>
-            - Added synchronous versions of the methods.
+            - Added support for .NET 10
         </PackageReleaseNotes>    
     </PropertyGroup>
     
@@ -25,6 +25,10 @@
             <PackagePath>\</PackagePath>
         </None>
         <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\RELEASE_NOTES.md">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netstandard20;net7.0;net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>netstandard20;net8.0;net9.0;net10.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
         
         <Title>Generated SMuFL font metadata</Title>
@@ -20,6 +20,10 @@
             <PackagePath>\</PackagePath>
         </None>
         <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\RELEASE_NOTES.md">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>

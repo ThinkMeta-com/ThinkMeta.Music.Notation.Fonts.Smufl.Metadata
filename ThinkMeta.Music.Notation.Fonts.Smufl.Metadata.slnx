@@ -4,6 +4,7 @@
     <File Path="Directory.Packages.Props" />
     <File Path="LICENSE" />
     <File Path="README.md" />
+    <File Path="RELEASE_NOTES.md" />
     <File Path="SIL-LICENSE.txt" />
     <File Path="SolutionFiles/ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Net.props" />
   </Folder>

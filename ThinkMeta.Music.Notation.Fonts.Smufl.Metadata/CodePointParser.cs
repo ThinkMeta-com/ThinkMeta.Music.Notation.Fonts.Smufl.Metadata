@@ -10,7 +10,7 @@ internal static partial class CodePointParser
 {
     public static int Parse(string? codePoint)
     {
-        if (codePoint == null)
+        if (codePoint is null)
             return 0;
 
         var match = CodePointRegex().Match(codePoint);

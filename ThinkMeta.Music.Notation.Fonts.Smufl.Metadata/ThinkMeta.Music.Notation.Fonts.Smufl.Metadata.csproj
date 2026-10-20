@@ -15,7 +15,9 @@
 
     <PropertyGroup>
         <PackageReleaseNotes>
-            - Added support for .NET 10
+            - Updated SMuFL metadata to the latest W3C SMuFL release
+            - Fixed RangeInfo.RangeEnd not being deserialized
+            - Renamed FontMetadata.DeserialzeFromStream(Async) to DeserializeFromStream(Async) (breaking change)
         </PackageReleaseNotes>    
     </PropertyGroup>
     

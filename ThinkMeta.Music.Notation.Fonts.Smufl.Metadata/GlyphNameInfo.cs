@@ -31,7 +31,7 @@ public partial class GlyphNameInfo
     public int CodePointValue => CodePointParser.Parse(CodePoint);
 
     /// <summary>
-    /// The parsed code point of the altenate glyph.
+    /// The parsed code point of the alternate glyph.
     /// </summary>
     public int AlternateCodePointValue => CodePointParser.Parse(AlternateCodePoint);
 }

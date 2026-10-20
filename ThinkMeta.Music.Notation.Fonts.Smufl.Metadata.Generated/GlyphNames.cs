@@ -11227,9 +11227,41 @@ public static class GlyphNames
     /// </summary>
     public const string Tuplet9 = "tuplet9";
     /// <summary>
+    /// Opening bracket italic.
+    /// </summary>
+    public const string TupletBracketLeftItalic = "tupletBracketLeftItalic";
+    /// <summary>
+    /// Opening bracket roman.
+    /// </summary>
+    public const string TupletBracketLeftRoman = "tupletBracketLeftRoman";
+    /// <summary>
+    /// Closing bracket italic.
+    /// </summary>
+    public const string TupletBracketRightItalic = "tupletBracketRightItalic";
+    /// <summary>
+    /// Closing bracket roman.
+    /// </summary>
+    public const string TupletBracketRightRoman = "tupletBracketRightRoman";
+    /// <summary>
     /// Tuplet colon.
     /// </summary>
     public const string TupletColon = "tupletColon";
+    /// <summary>
+    /// Opening parenthesis italic.
+    /// </summary>
+    public const string TupletParenthesisLeftItalic = "tupletParenthesisLeftItalic";
+    /// <summary>
+    /// Opening parenthesis roman.
+    /// </summary>
+    public const string TupletParenthesisLeftRoman = "tupletParenthesisLeftRoman";
+    /// <summary>
+    /// Closing parenthesis italic.
+    /// </summary>
+    public const string TupletParenthesisRightItalic = "tupletParenthesisRightItalic";
+    /// <summary>
+    /// Closing parenthesis roman.
+    /// </summary>
+    public const string TupletParenthesisRightRoman = "tupletParenthesisRightRoman";
     /// <summary>
     /// Wieniawski unmeasured tremolo.
     /// </summary>
@@ -22962,9 +22994,41 @@ public enum GlyphName
     /// </summary>
     Tuplet9,
     /// <summary>
+    /// Opening bracket italic.
+    /// </summary>
+    TupletBracketLeftItalic,
+    /// <summary>
+    /// Opening bracket roman.
+    /// </summary>
+    TupletBracketLeftRoman,
+    /// <summary>
+    /// Closing bracket italic.
+    /// </summary>
+    TupletBracketRightItalic,
+    /// <summary>
+    /// Closing bracket roman.
+    /// </summary>
+    TupletBracketRightRoman,
+    /// <summary>
     /// Tuplet colon.
     /// </summary>
     TupletColon,
+    /// <summary>
+    /// Opening parenthesis italic.
+    /// </summary>
+    TupletParenthesisLeftItalic,
+    /// <summary>
+    /// Opening parenthesis roman.
+    /// </summary>
+    TupletParenthesisLeftRoman,
+    /// <summary>
+    /// Closing parenthesis italic.
+    /// </summary>
+    TupletParenthesisRightItalic,
+    /// <summary>
+    /// Closing parenthesis roman.
+    /// </summary>
+    TupletParenthesisRightRoman,
     /// <summary>
     /// Wieniawski unmeasured tremolo.
     /// </summary>
@@ -34697,9 +34761,41 @@ public static class GlyphNameDescriptions
     /// </summary>
     public const string Tuplet9 = "Tuplet 9";
     /// <summary>
+    /// Opening bracket italic.
+    /// </summary>
+    public const string TupletBracketLeftItalic = "Opening bracket italic";
+    /// <summary>
+    /// Opening bracket roman.
+    /// </summary>
+    public const string TupletBracketLeftRoman = "Opening bracket roman";
+    /// <summary>
+    /// Closing bracket italic.
+    /// </summary>
+    public const string TupletBracketRightItalic = "Closing bracket italic";
+    /// <summary>
+    /// Closing bracket roman.
+    /// </summary>
+    public const string TupletBracketRightRoman = "Closing bracket roman";
+    /// <summary>
     /// Tuplet colon.
     /// </summary>
     public const string TupletColon = "Tuplet colon";
+    /// <summary>
+    /// Opening parenthesis italic.
+    /// </summary>
+    public const string TupletParenthesisLeftItalic = "Opening parenthesis italic";
+    /// <summary>
+    /// Opening parenthesis roman.
+    /// </summary>
+    public const string TupletParenthesisLeftRoman = "Opening parenthesis roman";
+    /// <summary>
+    /// Closing parenthesis italic.
+    /// </summary>
+    public const string TupletParenthesisRightItalic = "Closing parenthesis italic";
+    /// <summary>
+    /// Closing parenthesis roman.
+    /// </summary>
+    public const string TupletParenthesisRightRoman = "Closing parenthesis roman";
     /// <summary>
     /// Wieniawski unmeasured tremolo.
     /// </summary>
@@ -46432,9 +46528,41 @@ public static class GlyphNameCodePoints
     /// </summary>
     public const int Tuplet9 = 59529;
     /// <summary>
+    /// Opening bracket italic.
+    /// </summary>
+    public const int TupletBracketLeftItalic = 61204;
+    /// <summary>
+    /// Opening bracket roman.
+    /// </summary>
+    public const int TupletBracketLeftRoman = 61206;
+    /// <summary>
+    /// Closing bracket italic.
+    /// </summary>
+    public const int TupletBracketRightItalic = 61205;
+    /// <summary>
+    /// Closing bracket roman.
+    /// </summary>
+    public const int TupletBracketRightRoman = 61207;
+    /// <summary>
     /// Tuplet colon.
     /// </summary>
     public const int TupletColon = 59530;
+    /// <summary>
+    /// Opening parenthesis italic.
+    /// </summary>
+    public const int TupletParenthesisLeftItalic = 61200;
+    /// <summary>
+    /// Opening parenthesis roman.
+    /// </summary>
+    public const int TupletParenthesisLeftRoman = 61202;
+    /// <summary>
+    /// Closing parenthesis italic.
+    /// </summary>
+    public const int TupletParenthesisRightItalic = 61201;
+    /// <summary>
+    /// Closing parenthesis roman.
+    /// </summary>
+    public const int TupletParenthesisRightRoman = 61203;
     /// <summary>
     /// Wieniawski unmeasured tremolo.
     /// </summary>
@@ -50650,7 +50778,15 @@ public static class GlyphNameMappings
         [GlyphName.Tuplet7] = GlyphNames.Tuplet7,
         [GlyphName.Tuplet8] = GlyphNames.Tuplet8,
         [GlyphName.Tuplet9] = GlyphNames.Tuplet9,
+        [GlyphName.TupletBracketLeftItalic] = GlyphNames.TupletBracketLeftItalic,
+        [GlyphName.TupletBracketLeftRoman] = GlyphNames.TupletBracketLeftRoman,
+        [GlyphName.TupletBracketRightItalic] = GlyphNames.TupletBracketRightItalic,
+        [GlyphName.TupletBracketRightRoman] = GlyphNames.TupletBracketRightRoman,
         [GlyphName.TupletColon] = GlyphNames.TupletColon,
+        [GlyphName.TupletParenthesisLeftItalic] = GlyphNames.TupletParenthesisLeftItalic,
+        [GlyphName.TupletParenthesisLeftRoman] = GlyphNames.TupletParenthesisLeftRoman,
+        [GlyphName.TupletParenthesisRightItalic] = GlyphNames.TupletParenthesisRightItalic,
+        [GlyphName.TupletParenthesisRightRoman] = GlyphNames.TupletParenthesisRightRoman,
         [GlyphName.UnmeasuredTremolo] = GlyphNames.UnmeasuredTremolo,
         [GlyphName.UnmeasuredTremoloSimple] = GlyphNames.UnmeasuredTremoloSimple,
         [GlyphName.UnpitchedPercussionClef1] = GlyphNames.UnpitchedPercussionClef1,
@@ -53588,7 +53724,15 @@ public static class GlyphNameMappings
         [GlyphName.Tuplet7] = GlyphNameCodePoints.Tuplet7,
         [GlyphName.Tuplet8] = GlyphNameCodePoints.Tuplet8,
         [GlyphName.Tuplet9] = GlyphNameCodePoints.Tuplet9,
+        [GlyphName.TupletBracketLeftItalic] = GlyphNameCodePoints.TupletBracketLeftItalic,
+        [GlyphName.TupletBracketLeftRoman] = GlyphNameCodePoints.TupletBracketLeftRoman,
+        [GlyphName.TupletBracketRightItalic] = GlyphNameCodePoints.TupletBracketRightItalic,
+        [GlyphName.TupletBracketRightRoman] = GlyphNameCodePoints.TupletBracketRightRoman,
         [GlyphName.TupletColon] = GlyphNameCodePoints.TupletColon,
+        [GlyphName.TupletParenthesisLeftItalic] = GlyphNameCodePoints.TupletParenthesisLeftItalic,
+        [GlyphName.TupletParenthesisLeftRoman] = GlyphNameCodePoints.TupletParenthesisLeftRoman,
+        [GlyphName.TupletParenthesisRightItalic] = GlyphNameCodePoints.TupletParenthesisRightItalic,
+        [GlyphName.TupletParenthesisRightRoman] = GlyphNameCodePoints.TupletParenthesisRightRoman,
         [GlyphName.UnmeasuredTremolo] = GlyphNameCodePoints.UnmeasuredTremolo,
         [GlyphName.UnmeasuredTremoloSimple] = GlyphNameCodePoints.UnmeasuredTremoloSimple,
         [GlyphName.UnpitchedPercussionClef1] = GlyphNameCodePoints.UnpitchedPercussionClef1,
@@ -56754,7 +56898,15 @@ public static class GlyphNameMappings
         [GlyphName.Tuplet7] = GlyphNameDescriptions.Tuplet7,
         [GlyphName.Tuplet8] = GlyphNameDescriptions.Tuplet8,
         [GlyphName.Tuplet9] = GlyphNameDescriptions.Tuplet9,
+        [GlyphName.TupletBracketLeftItalic] = GlyphNameDescriptions.TupletBracketLeftItalic,
+        [GlyphName.TupletBracketLeftRoman] = GlyphNameDescriptions.TupletBracketLeftRoman,
+        [GlyphName.TupletBracketRightItalic] = GlyphNameDescriptions.TupletBracketRightItalic,
+        [GlyphName.TupletBracketRightRoman] = GlyphNameDescriptions.TupletBracketRightRoman,
         [GlyphName.TupletColon] = GlyphNameDescriptions.TupletColon,
+        [GlyphName.TupletParenthesisLeftItalic] = GlyphNameDescriptions.TupletParenthesisLeftItalic,
+        [GlyphName.TupletParenthesisLeftRoman] = GlyphNameDescriptions.TupletParenthesisLeftRoman,
+        [GlyphName.TupletParenthesisRightItalic] = GlyphNameDescriptions.TupletParenthesisRightItalic,
+        [GlyphName.TupletParenthesisRightRoman] = GlyphNameDescriptions.TupletParenthesisRightRoman,
         [GlyphName.UnmeasuredTremolo] = GlyphNameDescriptions.UnmeasuredTremolo,
         [GlyphName.UnmeasuredTremoloSimple] = GlyphNameDescriptions.UnmeasuredTremoloSimple,
         [GlyphName.UnpitchedPercussionClef1] = GlyphNameDescriptions.UnpitchedPercussionClef1,

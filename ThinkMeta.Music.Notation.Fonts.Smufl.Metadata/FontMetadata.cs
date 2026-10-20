@@ -18,7 +18,7 @@ public class FontMetadata
     public static FontMetadata? DeserializeFromFile(string path)
     {
         using var stream = File.OpenRead(path);
-        return DeserialzeFromStream(stream);
+        return DeserializeFromStream(stream);
     }
 
     /// <summary>
@@ -26,8 +26,7 @@ public class FontMetadata
     /// </summary>
     /// <param name="stream">The stream.</param>
     /// <returns>The metadata object.</returns>
-    public static FontMetadata? DeserialzeFromStream(Stream stream) => JsonSerializer.Deserialize<FontMetadata>(stream, _jsonSerializerOptions);
-
+    public static FontMetadata? DeserializeFromStream(Stream stream) => JsonSerializer.Deserialize<FontMetadata>(stream, _jsonSerializerOptions);
     /// <summary>
     /// Deserializes metadata from a JSON file.
     /// </summary>
@@ -36,7 +35,7 @@ public class FontMetadata
     public static async Task<FontMetadata?> DeserializeFromFileAsync(string path)
     {
         using var stream = File.OpenRead(path);
-        return await DeserialzeFromStreamAsync(stream).ConfigureAwait(false);
+        return await DeserializeFromStreamAsync(stream).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -44,8 +43,7 @@ public class FontMetadata
     /// </summary>
     /// <param name="stream">The stream.</param>
     /// <returns>The metadata object.</returns>
-    public static ValueTask<FontMetadata?> DeserialzeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<FontMetadata>(stream, _jsonSerializerOptions);
-
+    public static ValueTask<FontMetadata?> DeserializeFromStreamAsync(Stream stream) => JsonSerializer.DeserializeAsync<FontMetadata>(stream, _jsonSerializerOptions);
     /// <summary>
     /// The name of the font to which the metadata applies.
     /// </summary>

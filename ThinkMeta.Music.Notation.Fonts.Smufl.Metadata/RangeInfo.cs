@@ -28,7 +28,7 @@ public class RangeInfo
     /// <summary>
     /// The end code point.
     /// </summary>
-    [JsonPropertyName("end")]
+    [JsonPropertyName("range_end")]
     public string? RangeEnd { get; set; }
 
     /// <summary>

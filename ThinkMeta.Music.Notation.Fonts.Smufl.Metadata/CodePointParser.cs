@@ -14,7 +14,9 @@ internal static partial class CodePointParser
             return 0;
 
         var match = CodePointRegex().Match(codePoint);
-        return int.Parse(match.Groups[1].Value, NumberStyles.HexNumber);
+        return match.Success
+            ? int.Parse(match.Groups[1].Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture)
+            : throw new FormatException($"Invalid code point \"{codePoint}\".");
     }
 
     [GeneratedRegex(@"U\+([0-9a-fA-F]{4,5})")]

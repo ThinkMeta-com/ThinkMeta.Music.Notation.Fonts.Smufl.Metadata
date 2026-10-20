@@ -12,6 +12,11 @@ internal static class Program
 
     private static async Task Main(string[] args)
     {
+        if (args.Length != 1) {
+            await Console.Error.WriteLineAsync("Usage: ThinkMeta.Music.Notation.Fonts.Smufl.Metadata.Generator <output directory>");
+            Environment.Exit(1);
+        }
+
         await WriteGlyphNamesFileAsync(args[0]);
         await WriteClassesFileAsync(args[0]);
     }
@@ -157,7 +162,7 @@ internal static class Program
             .Append(Indent1)
             .AppendLine("public static IReadOnlyDictionary<ClassName, IReadOnlyList<GlyphName>> AllClasses { get; } = new Dictionary<ClassName, IReadOnlyList<GlyphName>> {");
 
-        foreach (var @class in classes!) {
+        foreach (var @class in classes) {
             _ = stringBuilder
                 .Append(Indent2)
                 .AppendLine($"[ClassName.{ToPascalCase(@class.Key)}] = [")
@@ -183,7 +188,7 @@ internal static class Program
             .AppendSummary("Class name enums to string mappings", Indent1)
             .Append(Indent1)
             .AppendLine("public static IReadOnlyDictionary<ClassName, string> ClassName2StringMap { get; } = new Dictionary<ClassName, string> {")
-            .AppendItems(Indent2, classes!.Keys, @class => $"[ClassName.{ToPascalCase(@class)}] = ClassNames.{ToPascalCase(@class)},")
+            .AppendItems(Indent2, classes.Keys, @class => $"[ClassName.{ToPascalCase(@class)}] = ClassNames.{ToPascalCase(@class)},")
             .Append(Indent1)
             .AppendLine("};");
 
@@ -200,7 +205,7 @@ internal static class Program
             .Append(indent)
             .AppendLine("/// <summary>")
             .Append(indent)
-            .AppendLine($"/// {summary}.")
+            .AppendLine($"/// {EscapeXml(summary)}.")
             .Append(indent)
             .AppendLine("/// </summary>");
     }
@@ -260,5 +265,7 @@ internal static class Program
         };
     }
 
-    private static string Escape(string s) => s.Replace("\"", "\\\"");
+    private static string Escape(string s) => s.Replace("\\", "\\\\").Replace("\"", "\\\"");
+
+    private static string EscapeXml(string s) => s.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
 }
